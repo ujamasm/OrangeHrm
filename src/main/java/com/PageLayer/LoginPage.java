@@ -23,23 +23,27 @@ public class LoginPage extends BaseClass {
 	@FindBy(xpath="//ul[@class='oxd-main-menu']/child::li[8]/descendant::span")
 	WebElement validateHome;
 	
+	
+	
 	public LoginPage()
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
+	
+	
 	public void ValidateHomePage()
 	{
-		//String logo=logintext.getText();
-		System.out.println("logo");
-		/*if(logo.contains("Login"))
+		String logo=logintext.getText();
+		
+		if(logo.contains("Login"))
 		{
 			System.out.println("User is on main login page");
 		}
 		else
 		{
 			System.out.println("not on login page");
-		}*/
+		}
 	}
 	
 	public void LoginFunctionality()

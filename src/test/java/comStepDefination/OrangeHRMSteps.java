@@ -9,25 +9,25 @@ import io.cucumber.java.en.When;
 
 public class OrangeHRMSteps extends BaseClass {
 
-	LoginPage l1=new LoginPage();
+	LoginPage lp;
 	
 	@Given("user should be on login page")
 	public void user_should_be_on_login_page() {
-		
 		BaseClass.Initialization();
-		l1.ValidateHomePage();
+		lp = new LoginPage();
+		lp.ValidateHomePage();
 	}
 
 	@When("Enter the valid credentials")
 	public void enter_the_valid_credentials() {
 		
-		l1.LoginFunctionality();
+		lp.LoginFunctionality();
 	}
 
 	@Then("homepage will open")
 	public void homepage_will_open() {
 		
-		l1.ValidateLogin();
+		lp.ValidateLogin();
 	}
 
 }
